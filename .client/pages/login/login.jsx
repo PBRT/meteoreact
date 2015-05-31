@@ -1,5 +1,6 @@
 module.exports = function() {
   var Router = require('react-router');
+  var Navigation = require('react-router').Navigation;
   var Link = Router.Link;
 
   var React = require('react');
@@ -7,6 +8,19 @@ module.exports = function() {
 
   return React.createClass({
     displayName: 'Login',
+    mixins: [Navigation],
+    login() {
+      var self = this;
+      Meteor.loginWithFacebook({
+         requestPermissions: ['email']
+       },
+       function (error) {
+         if (error) {
+             return console.log(error);
+         }
+         self.transitionTo('home');
+       })
+    },
     render: function() {
       return (
         <div style={s.container}>
@@ -16,11 +30,11 @@ module.exports = function() {
           <div style={s.subtitle}>
             Discover - Like - Share - Save
           </div>
-          <Link
-            to='home'
+          <div
             style={s.button}
+            onClick={this.login}
           > Login
-          </Link>
+          </div>
         </div>
       );
     },

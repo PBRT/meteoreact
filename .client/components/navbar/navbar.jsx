@@ -38,12 +38,19 @@ module.exports = function() {
         {name: 'About', action: 'about', id: 2},
       ];
 
+      var urlPic;
+
+      if (Meteor.user()) {
+        urlPic = 'http://graph.facebook.com/' + Meteor.user().services.facebook.id + '/picture';
+      }
+
       return (
         <div style={s.container}>
           <div style={s.brand}>
             VOUCHER
           </div>
           {this.renderItems(items)}
+          <img src={urlPic}/>
         </div>
       );
     },

@@ -56,3 +56,4 @@ function buildRoutes(app) {
     </Route>
   );
 }
+
