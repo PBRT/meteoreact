@@ -1,0 +1,13 @@
+@font-face{
+  font-family: 'SofiaPro';
+  src: url('../assets/fonts/SofiaProLight-webfont.eot');
+  src: url('../assets/fonts/SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/SofiaProLight-webfont.woff') format('woff'),
+  url('../assets/fonts/SofiaProLight-webfont.ttf') format('truetype'),
+  url('../assets/fonts/SofiaProLight-webfont.svg') format('svg');
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'SofiaPro', sans-serif;
+}

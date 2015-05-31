@@ -1,0 +1,4 @@
+.client/npm-debug.log
+client/bundle.js
+.meteor/local
+.client/node_modules
