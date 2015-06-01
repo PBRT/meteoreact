@@ -19,9 +19,9 @@ module.exports = {
       childs: [],
       id: 2
     },{
-      name: 'contact',
-      filePath: './pages/contact/contact.jsx',
-      url: '/contact',
+      name: 'vouchers',
+      filePath: './pages/vouchers/vouchers.jsx',
+      url: '/vouchers',
       childs: [],
       id: 3
     },

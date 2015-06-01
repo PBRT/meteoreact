@@ -14,7 +14,7 @@ Meteor.startup(function() {
 
   var App = React.createClass({
     render() {
-      var navbarComponent;
+      var navbarComponent, footerComponent;
       var style = {
         height: '100%',
         backgroundColor: Colors.redDark,
@@ -22,12 +22,15 @@ Meteor.startup(function() {
       if(this.props.path !== '/login') {
         var NavBar = require('./components/navbar/navbar.jsx')();
         navbarComponent = (<NavBar />);
+        var Footer = require('./components/footer/footer.jsx')();
+        footerComponent = (<Footer />);
         style.backgroundColor = Colors.white;
       }
       return (
         <div style={style}>
           {navbarComponent}
           <RouteHandler />
+          {footerComponent}
         </div>
       );
     }

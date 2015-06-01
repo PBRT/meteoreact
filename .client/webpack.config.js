@@ -2,7 +2,7 @@
   Webpack base config file
 */
 
-var path = require('path')
+var path = require('path');
 
 module.exports = {
   entry: {
@@ -19,12 +19,16 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.(ttf|eot|svg|woff)$/, exclude: /node_modules/,
+        test: /\.(ttf|eot|svg|woff|png|jpg)$/, exclude: /node_modules/,
         loader: "url-loader"
       },
       {
         test: /\.css$/, exclude: /node_modules/,
         loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.json$/, exclude: /node_modules/,
+        loader: 'json-loader'
       },
     ]
   },
