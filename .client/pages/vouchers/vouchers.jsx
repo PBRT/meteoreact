@@ -4,11 +4,11 @@ module.exports = function() {
   var s = getStyle();
 
   return React.createClass({
-    displayName: 'Contact',
+    displayName: 'Vouchers',
     render: function() {
       return (
         <div style={s.container}>
-          CONTACT PAGE
+          List Of Vouchers
         </div>
       );
     },
